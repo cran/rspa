@@ -8,8 +8,8 @@
   adjust(object, ...)
 
   \method{adjust}{editmatrix} (object, x,
-    w = rep(1, length(x)), tol = 0.01, maxiter = 1000L,
-    method = c("dense", "sparse"), ...)
+    w = rep(1, length(x)), method = c("dense", "sparse"),
+    ...)
 
   \method{adjust}{sparseConstraints} (object, x,
     w = rep(1, length(x)), tol = 0.01, maxiter = 1000L,

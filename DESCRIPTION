@@ -13,13 +13,13 @@ Description: Based on (optionally sparse) quadratic optimization with
         been tested on fairly large optimization problems with up to a
         few million variables and several hundred thousand
         restrictions.
-Version: 0.1-0
+Version: 0.1-1
 Depends: editrules
 URL: https://github.com/markvanderloo/rspa
 Date: 2012-07-15
 Suggests: knitr, testthat
 Collate: 'adjusted.R' 'adjustedRecords.R' 'adjust.R' 'adjustRecords.R'
         'rspa.R' 'sparseConstraints.R' 'utils.R'
-Packaged: 2012-09-21 12:00:34 UTC; mark
+Packaged: 2013-01-21 07:51:05 UTC; mark
 Repository: CRAN
-Date/Publication: 2012-09-21 12:35:53
+Date/Publication: 2013-01-21 12:59:34
