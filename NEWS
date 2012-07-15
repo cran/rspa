@@ -1,6 +1,11 @@
+version 0.1-2
+- Cleaned code after compilation warnings in candidate compiler for OSX (Thanks to Prof. Brian Ripley)
+- bugfix in print method for object of class 'adjustedRecords'
+
 version 0.1-1
 - Update in vignette due to knitr upgrade (thanks to Yihui Xi).
 - Bugfix in adjustRecords: optional parameters were not passed to "adjust" (thanks to Sander Scholtus)
 
 version 0.1-0
 - First stable release
+
