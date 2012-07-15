@@ -1,0 +1,96 @@
+\name{sparseConstraints}
+\alias{print.sparseConstraints}
+\alias{sparseConstraints}
+\alias{sparseConstraints.data.frame}
+\alias{sparseConstraints.editmatrix}
+\alias{sparseConstraints.matrix}
+\title{Generate sparse set of constraints.}
+\usage{
+  sparseConstraints(x, ...)
+
+  \method{sparseConstraints}{editmatrix} (x, tol = 1e-08,
+    ...)
+
+  \method{sparseConstraints}{matrix} (x, b,
+    neq = length(b), tol = 1e-08, ...)
+
+  \method{sparseConstraints}{data.frame} (x, b,
+    neq = length(b), base = min(x[, 2]), sorted = FALSE,
+    ...)
+
+  \method{print}{sparseConstraints} (x, range = 1L:10L,
+    ...)
+}
+\arguments{
+  \item{x}{R object to be translated to sparseConstraints
+  format.}
+
+  \item{...}{options to be passed to other methods}
+
+  \item{tol}{Tolerance for testing where coefficients are
+  zero}
+
+  \item{b}{Constant vector}
+
+  \item{neq}{The first \code{new} equations are interpreted
+  as equality constraints, the rest as '<='}
+
+  \item{base}{are the indices in \code{x[,1:2]} base 0 or
+  base 1?}
+
+  \item{sorted}{is \code{x} sorted by the first column?}
+
+  \item{range}{integer vector stating which constraints to
+  print}
+}
+\value{
+  Object of class \code{sparseConstraints} (see details).
+}
+\description{
+  Generate sparse set of constraints.
+}
+\section{Details}{
+  The \code{sparseConstraints} objects holds the system
+  \eqn{\boldsymbol{Ax}\leq \boldsymbol{b}} in column sparse
+  format, outside of \code{R}'s memory. In \code{R}, it is
+  a \emph{reference object}. In particular, it is
+  meaningless to \itemize{ \item{Copy the object. You only
+  will only generate a pointer to physically the same
+  object.} \item{Save the object. The physical object is
+  destroyed when \code{R} closes, or when \code{R}'s
+  garbage collector cleans up a removed
+  \code{sparseConstraints} object.} }
+}
+\examples{
+# define constraints from editmatrix object:
+E <- editmatrix(expression(
+     x1 + x8 ==  950,
+     x3 + x4 ==  950 ,
+     x6 + x7 == x8,
+     x4 > 0
+))
+
+# generate sparseConstraints object
+sparseConstraints(E)
+
+# same constraints, from data.frame
+rc <- data.frame( 
+   row = c( 1, 1, 2, 2, 3, 3, 3, 4),
+   col = c( 1, 2, 3, 4, 2, 5, 6, 4),
+  coef = c(-1,-1,-1,-1, 1,-1,-1,-1)
+)
+b <- c(-950, -950, 0,0) 
+
+sparseConstraints(rc, b, neq=3)
+
+
+# same constraints, from dense matrix
+
+A <- getA(E)
+b <- getb(E)
+sparseConstraints(A, b, neq=3)
+
+
+
+}
+

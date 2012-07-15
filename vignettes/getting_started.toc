@@ -1,0 +1,9 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}A simple example}{3}
+\contentsline {section}{\numberline {3}Treating many records}{5}
+\contentsline {section}{\numberline {4}Treating large problems}{6}
+\contentsline {section}{\numberline {5}About the adjustment algorithm and convergence}{11}
+\contentsline {section}{\numberline {6}Some notes on implementation}{12}
+\contentsline {section}{\numberline {7}Conclusion}{12}
+\contentsline {section}{\numberline {8}Acknowledgements}{13}

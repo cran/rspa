@@ -1,0 +1,40 @@
+\name{adjustRecords}
+\alias{adjustRecords}
+\title{Adjust records in a \code{data.frame}}
+\usage{
+  adjustRecords(E, dat,
+    adjust = array(TRUE, dim = dim(dat)),
+    w = rep(1, ncol(dat)), verbose = FALSE, ...)
+}
+\arguments{
+  \item{E}{a \code{\link[editrules]{editmatrix}}}
+
+  \item{dat}{a \code{data.frame}}
+
+  \item{adjust}{a \code{nrow(dat) x ncol(dat)} boolean
+  array, indicating which fields must be adjusted.}
+
+  \item{w}{a vector of length \code{ncol(dat)} or array of
+  size \code{adjust} with adjustment weights.}
+
+  \item{verbose}{print progress to console}
+
+  \item{...}{extra options, passed through to
+  \code{\link{adjust}}}
+}
+\value{
+  An object of class \code{adjustedRecords}
+}
+\description{
+  A convenient wrapper around \code{\link{adjust}} that
+  loops over all records in a \code{data.frame}
+}
+\section{Details}{
+  This function is not written to be especiallty speedy or
+  memory-efficient, but to offer a convenient interface to
+  adjusting a \code{data.frame} of records.
+}
+\seealso{
+  \code{\link{adjust}}
+}
+
