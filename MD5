@@ -1,6 +1,6 @@
-2721e0c0d953ea04f60a7eda13873467 *DESCRIPTION
+d7a5d8bb565f0ab46c3b21fe376f3f88 *DESCRIPTION
 e097ed2384bd7975928f368e9f1ddc03 *NAMESPACE
-c8417720d95b39eecbd401146ba029e0 *NEWS
+74bd615a6d6df9c512c113fec8cb61e5 *NEWS
 bdcab7e3f9d2d62fade703fef62ced65 *R/adjust.R
 09a2101add1780a556016de921137dad *R/adjustRecords.R
 f6a77c7dc1625d4f40b5814190ac808c *R/adjusted.R
@@ -8,8 +8,9 @@ f6a77c7dc1625d4f40b5814190ac808c *R/adjusted.R
 7a0d42dc99d98c6c45c7bbca4f2fb41d *R/rspa.R
 fcc73dda50e39edb359269e20d0e9a60 *R/sparseConstraints.R
 2880bf944c154e596ff515015e452b8f *R/utils.R
-fdf343ec471476144b77eded29d27be5 *inst/doc/getting_started.Rnw
-095bfeb1ee8aed905f3172f39a5c4451 *inst/doc/getting_started.pdf
+e83d4ccfbb8a3a442a81ace1646ddbce *inst/doc/getting_started.R
+b1e8c124a3a290c88a710a79626ca97e *inst/doc/getting_started.Rnw
+0c02a59f6dd90edda6380e992ee986c2 *inst/doc/getting_started.pdf
 f661f09d0209441e3dc7f1e9bd04298e *inst/tests/adjust.R
 e1193bee30592f4ca18a5d3c2e2aa381 *inst/tests/sparseConstraints.R
 6903ddfcb7907477e3dc8e0ba3eb9585 *inst/tests/utils.R
@@ -38,8 +39,8 @@ d5c1256f60675f31af4908bb3f8c552a *src/sparseConstraints.c
 bb44c9d5a5459060d7c7b6b4511a864c *src/sparseConstraints.h
 46f386d870ef0a990eb1da40ee094457 *tests/testpackage.R
 96078eeedf59f54871915055eb31c198 *vignettes/Makefile
-a53a0282ed08a6be0d40329c7ea4c5e8 *vignettes/Rplots.pdf
-3b7ccb11270d76eb0e572a6792deb8ea *vignettes/figure/unnamed-chunk-11.pdf
-fdf343ec471476144b77eded29d27be5 *vignettes/getting_started.Rnw
+5cce0fae40820f04916a39fdb5347332 *vignettes/Rplots.pdf
+7159630be2ce9fdecefc52fede770ad7 *vignettes/figure/unnamed-chunk-11.pdf
+b1e8c124a3a290c88a710a79626ca97e *vignettes/getting_started.Rnw
 e8a42b43ca728bf1a1fb62b721f836cd *vignettes/getting_started.toc
 5f70943c0b32f1d8df0d50606cfd6ade *vignettes/rspa.bib
