@@ -2,6 +2,16 @@
 
 #include <math.h>
 
+// computes ||x-y||_Inf
+double maxdist(double *x, double *y, int n){
+   double t, m = 0.0; 
+   
+   for ( int j=0; j<n; j++ ){ 
+      t = fabs(x[j]-y[j]);
+      if ( t > m ) m = t;
+   }
+   return m;
+}
 
 double absmax(double *conv, double *awa, int neq, int nconstraints){
 
