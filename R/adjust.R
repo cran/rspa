@@ -1,9 +1,13 @@
-
-#' Adjust a data to meet linear (in)equality constraints
-#'
+#' DEPRECATED Adjust a data to meet linear (in)equality constraints
+#' 
 #' Adjust a vector \eqn{\boldsymbol{x}} to meet
 #' constraints \eqn{\boldsymbol{Ax} \leq \boldsymbol{b}}. 
-#' 
+#' As of version 0.2 this function is deprecated. Please use
+#' \itemize{
+#' \item{\code{\link[lintools]{project}} from package \code{\link[lintools]{lintools}} to replace \code{adjust.matrix}}
+#' \item{\code{\link[lintools]{sparse_project}} from pacakge \code{\link[lintools]{lintools}} to replace \code{adjust.sparseConstraints}}
+#' }
+#'  
 #'
 #' @param object an \code{R} object describing constraints (see details)
 #' @param ... Arguments to be passed to other methods
@@ -47,31 +51,31 @@
 #'
 #'
 #'
-#' @example ../examples/adjust.R
 #' @export
+#' @keywords internal
 adjust <- function(object, ...){
    UseMethod('adjust')
 }
 
-#'
 #' @method adjust editmatrix
 #' @param method use dense or sparse matrix method.
 #' @export
 #' @rdname adjust
 adjust.editmatrix <- function(object, x, w=rep(1,length(x)), method=c('dense','sparse'), ...){
+  stopifnot(requireNamespace("editrules",quietly=TRUE))
   method <- match.arg(method)
-   if (!isNormalized(object)) object <- normalize(object)
-	object <- reduce(object)
+   if (!editrules::isNormalized(object)) object <- editrules::normalize(object)
+	object <- editrules::reduce(object)
    # match names 
    if ( !is.null(names(x)) ){
-      J <- match(getVars(object), names(x))
+      J <- match(editrules::getVars(object), names(x))
    } else {
-      stopifnot(length(x) == length(getVars(object)))
+      stopifnot(length(x) == length(editrules::getVars(object)))
       J <- 1:length(x)
    }
    u <- x[J]
    w <- w[J]
-   ops <- getOps(object)
+   ops <- editrules::getOps(object)
    I <- order(ops,decreasing=TRUE)
    neq <- sum(ops == "==")
 
@@ -85,8 +89,8 @@ adjust.editmatrix <- function(object, x, w=rep(1,length(x)), method=c('dense','s
       )
 	} else {
 		y <- adjust.matrix(
-			object = getA(object)[I,,drop=FALSE], 
-			b      = getb(object)[I], 
+			object = editrules::getA(object)[I,,drop=FALSE], 
+			b      = editrules::getb(object)[I], 
 			x      = u,
 			neq    = neq,
          w      = w,
@@ -100,12 +104,11 @@ adjust.editmatrix <- function(object, x, w=rep(1,length(x)), method=c('dense','s
    y
 }
 
-#'
 #' @method adjust sparseConstraints
 #' @export
 #' @rdname adjust
 adjust.sparseConstraints <- function(object, x, w=rep(1.0,length(x)), tol=1e-2, maxiter=1000L, ...){
-
+  .Deprecated(new="lintools::sparse_project")
    stopifnot(
 		is.numeric(x),
 		length(x) == object$.nvar(),
@@ -126,7 +129,6 @@ adjust.sparseConstraints <- function(object, x, w=rep(1.0,length(x)), tol=1e-2, 
 
 
 
-#' 
 #' @param b Constant vector of the constraint system \eqn{Ax\leq b}
 #' @param x The vector to be adjusted
 #' @param neq the first \code{neq} linear relations are equalities.
@@ -138,6 +140,7 @@ adjust.sparseConstraints <- function(object, x, w=rep(1.0,length(x)), tol=1e-2, 
 #' @export
 #' @rdname adjust
 adjust.matrix <- function(object, b, x, neq=length(b), w=rep(1.0,length(x)), tol=1e-2, maxiter=1000L, ...){
+  .Deprecated(new="lintools::project")
    stopifnot(
 		is.numeric(x),
 		length(x) == ncol(object),
@@ -173,9 +176,6 @@ adjust.matrix <- function(object, b, x, neq=length(b), w=rep(1.0,length(x)), tol
    objective <- sqrt(sum(w*(x-as.vector(y))^2))
    new_adjusted(y, t1-t0,"dense", objective, colnames(object))
 } 
-
-
-
 
 
 

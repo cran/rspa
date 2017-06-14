@@ -1,4 +1,8 @@
-#' Adjusted records
+#' DEPRECATED Adjusted records
+#' 
+#' As this is output from deprecated \code{adjustRecords}, this object is
+#' deprecated as of version 0.2.0 as well. 
+#' 
 #' @name adjustedRecords
 #' @seealso \code{\link{adjustRecords}}
 #' @section Details:
@@ -16,7 +20,7 @@
 #' objective functions. To avoid densities at values below 0, the accuracy densities are evaluated
 #' under a sqrt-transform and transformed back before plotting. For the objective function values
 #' a log-transform is used.
-#' 
+#' @keywords internal
 {}
 
 
@@ -25,6 +29,7 @@
 #' @param ... additional parameters to pass to other methods
 #' @rdname adjustedRecords
 #' @export
+#' @keywords internal
 print.adjustedRecords <- function(x,...){
    I <- 1:min(10,nrow(x$adjusted))
    cat("Object of class 'adjustedRecords'\n")
@@ -39,6 +44,7 @@ print.adjustedRecords <- function(x,...){
 #' @param object object of class \code{adjustedRecords}
 #' @rdname adjustedRecords
 #' @export
+#' @keywords internal
 summary.adjustedRecords <- function(object,...){
 	cat("Object of class 'adjustedRecords'\n")
 
@@ -56,10 +62,10 @@ summary.adjustedRecords <- function(object,...){
 }
 
 
-#'
 #' @method plot adjustedRecords
 #' @rdname adjustedRecords
 #' @export
+#' @keywords internal
 plot.adjustedRecords <- function(x,...){
 
    if (nrow(x$adjusted) <= 1 ){
