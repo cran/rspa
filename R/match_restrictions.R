@@ -66,6 +66,8 @@ match_restrictions <- function(dat, restrictions
   in_res <- names(dat)[names(dat) %in% colnames(L$A)]
   weight <- weight[ , in_res, drop=FALSE]
   adjust <- adjust[ , in_res, drop=FALSE]
+  # put columns of A in same order as data.
+  L$A <- L$A[,in_res, drop=FALSE]
   # working copy.
   M <- t(dat[in_res])
   
@@ -81,7 +83,8 @@ match_restrictions <- function(dat, restrictions
                 , b = constr$b
                 , x = x
                 , neq = sum(L$operators=="==")
-                , nleq = sum(L$operators=="<="))
+                , nleq = sum(L$operators=="<=")
+                , implied_equations=FALSE)
     
     wt <- weight[i, names(constr$x)]
     out <- lintools::project(x = constr$x
