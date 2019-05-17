@@ -21,3 +21,4 @@ Remove cell position tags
 Other tagging: \code{\link{tag_missing}},
   \code{\link{tagged_values}}
 }
+\concept{tagging}

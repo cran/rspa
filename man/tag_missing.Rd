@@ -21,3 +21,4 @@ Attach an attribute that marks which cells are empty (NA).
 Other tagging: \code{\link{remove_tag}},
   \code{\link{tagged_values}}
 }
+\concept{tagging}

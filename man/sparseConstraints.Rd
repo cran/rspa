@@ -12,10 +12,11 @@ sparseConstraints(x, ...)
 
 \method{sparseConstraints}{editmatrix}(x, tol = 1e-08, ...)
 
-\method{sparseConstraints}{matrix}(x, b, neq = length(b), tol = 1e-08, ...)
+\method{sparseConstraints}{matrix}(x, b, neq = length(b), tol = 1e-08,
+  ...)
 
-\method{sparseConstraints}{data.frame}(x, b, neq = length(b), base = min(x[,
-  2]), sorted = FALSE, ...)
+\method{sparseConstraints}{data.frame}(x, b, neq = length(b),
+  base = min(x[, 2]), sorted = FALSE, ...)
 
 \method{print}{sparseConstraints}(x, range = 1L:10L, ...)
 }

@@ -21,3 +21,4 @@ Retrieve tagged cell positions
 Other tagging: \code{\link{remove_tag}},
   \code{\link{tag_missing}}
 }
+\concept{tagging}
