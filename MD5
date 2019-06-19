@@ -1,7 +1,7 @@
-388c99a4891ce82f9e3cc458c8e3d29c *DESCRIPTION
+526898faec36d8add5b883c27f58da07 *DESCRIPTION
 d7cd8491d6c2fe1f7c1c988045396313 *NAMESPACE
-5dfadbaede46240d22fdd3e6180cd646 *NEWS
-b0e7f3710df7376242d9c6ba83051961 *R/adjust.R
+82b15ce7e77a21985c9726afadc094ea *NEWS
+ae35678160ec193a5e37daee1d1e0d89 *R/adjust.R
 4f740070aa6a2782b18526270d9ecbe2 *R/adjustRecords.R
 a1007a3e1930e5a81d3d8be4ece11f0c *R/adjusted.R
 6d0982bc4b3b10bc7ff27fa122b501ea *R/adjustedRecords.R
@@ -15,7 +15,7 @@ a1007a3e1930e5a81d3d8be4ece11f0c *R/adjusted.R
 7dbeb7783c1706470868020b45dc4c6c *inst/tinytest/test_match_restrictions.R
 6879fe3be582aa2648a2027ba24a9a86 *inst/tinytest/test_sparseConstraints.R
 b9523cc06c8876ebb77f67fcac29a950 *inst/tinytest/test_utils.R
-6d1c30ccd85ba1345ac5917531fbdee6 *man/adjust.Rd
+df72ec142a5349c718d9e81c856374c7 *man/adjust.Rd
 f4076dd6fddf9bbe1739883f1e378a53 *man/adjustRecords.Rd
 b74e941bae5c2756b279d1af32b2bde3 *man/adjusted.Rd
 ccac36c8bebe8dce6de2d4e361bb0b40 *man/adjustedRecords.Rd
