@@ -18,7 +18,8 @@ remove_tag(dat, ...)
 Remove cell position tags
 }
 \seealso{
-Other tagging: \code{\link{tag_missing}},
-  \code{\link{tagged_values}}
+Other tagging: 
+\code{\link{tag_missing}()},
+\code{\link{tagged_values}()}
 }
 \concept{tagging}

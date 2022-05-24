@@ -18,7 +18,8 @@ A \code{logical} matrix, or \code{NULL}
 Retrieve tagged cell positions
 }
 \seealso{
-Other tagging: \code{\link{remove_tag}},
-  \code{\link{tag_missing}}
+Other tagging: 
+\code{\link{remove_tag}()},
+\code{\link{tag_missing}()}
 }
 \concept{tagging}

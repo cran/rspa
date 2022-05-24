@@ -18,7 +18,8 @@ tag_missing(dat, ...)
 Attach an attribute that marks which cells are empty (NA).
 }
 \seealso{
-Other tagging: \code{\link{remove_tag}},
-  \code{\link{tagged_values}}
+Other tagging: 
+\code{\link{remove_tag}()},
+\code{\link{tagged_values}()}
 }
 \concept{tagging}

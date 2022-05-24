@@ -4,8 +4,14 @@
 \alias{adjustRecords}
 \title{DEPRECATED Adjust records in a \code{data.frame}}
 \usage{
-adjustRecords(E, dat, adjust = array(TRUE, dim = dim(dat)), w = rep(1,
-  ncol(dat)), verbose = FALSE, ...)
+adjustRecords(
+  E,
+  dat,
+  adjust = array(TRUE, dim = dim(dat)),
+  w = rep(1, ncol(dat)),
+  verbose = FALSE,
+  ...
+)
 }
 \arguments{
 \item{E}{a \code{\link[editrules]{editmatrix}}}

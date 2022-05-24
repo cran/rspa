@@ -4,8 +4,14 @@
 \alias{match_restrictions}
 \title{Alter numeric data records to match linear (in)equality constraints.}
 \usage{
-match_restrictions(dat, restrictions, adjust, weight = rep(1, ncol(dat)),
-  remove_tag = TRUE, ...)
+match_restrictions(
+  dat,
+  restrictions,
+  adjust,
+  weight = rep(1, ncol(dat)),
+  remove_tag = TRUE,
+  ...
+)
 }
 \arguments{
 \item{dat}{A \code{data.frame}}
