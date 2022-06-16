@@ -7,7 +7,7 @@
 match_restrictions(
   dat,
   restrictions,
-  adjust,
+  adjust = NULL,
   weight = rep(1, ncol(dat)),
   remove_tag = TRUE,
   ...
