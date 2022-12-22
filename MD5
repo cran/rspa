@@ -1,6 +1,6 @@
-9ccdd8875a9a54db40df4b2b27aaddb1 *DESCRIPTION
+fa7fa0435eb864bd3a2d253985b03353 *DESCRIPTION
 d7cd8491d6c2fe1f7c1c988045396313 *NAMESPACE
-b2e8291eb84b4a68ff022fb5451075d1 *NEWS
+f7c537b93f8a8558d2a6429491aa969d *NEWS
 ae35678160ec193a5e37daee1d1e0d89 *R/adjust.R
 4f740070aa6a2782b18526270d9ecbe2 *R/adjustRecords.R
 a1007a3e1930e5a81d3d8be4ece11f0c *R/adjusted.R
@@ -31,7 +31,7 @@ b559b4a15560cf517738d19348db6290 *src/R_register_native.c
 6ec14280c35123c7629c6fe86f591524 *src/R_sc_arith.c
 b8d90b325670b3af9f9390622058d283 *src/R_spa.c
 96c013b80d4f9f4d6becde0451a0b158 *src/R_spa.h
-38c2f1aff3168216315b4416e14fd3c2 *src/R_sparseConstraints.c
+21d17c4aba8bc29e5e5e9f711560de04 *src/R_sparseConstraints.c
 7fcd99958f9d30afb8deffa47f36b307 *src/R_sparseConstraints.h
 84278fe1e8d935b203bc7a89888959f5 *src/dc_spa.c
 e6cc557a4e3f57719711abd0d7396a95 *src/dc_spa.h
